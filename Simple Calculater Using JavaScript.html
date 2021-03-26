@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+<head>
+<style>
+	#main{
+			background-color: green;
+			margin-top:50px;
+			height: 515px;
+			width: 450px;
+			border-radius:20px;
+			margin-left: 150px;}
+	 input[type=text]{	
+	border-radius: 10px;
+	padding: 10px;
+	width: 65%;
+    font-size:17px;
+	border:none;s
+	margin:15px;
+	height:10px;
+	margin-left:60px;}
+input[type=submit]{
+background:orange;
+color:#fff;
+font-weight:bold;
+height:40px;
+margin-left:160px;
+width: 120px;
+border-radius: 40px;
+}
+</style>
+<script>
+function cal(d){
+	if(d==1){
+var a,b,c;
+a=Number(document.getElementById("first").value);
+b=Number(document.getElementById("second").value);
+c= a + b;
+document.getElementById("answer").value= c;
+}
+if(d==2){
+var a,b,c;
+a=Number(document.getElementById("first").value);
+b=Number(document.getElementById("second").value);
+c= a - b;
+document.getElementById("answer").value= c;
+}
+if(d==3){
+var a,b,c;
+a=Number(document.getElementById("first").value);
+b=Number(document.getElementById("second").value);
+c= a * b;
+document.getElementById("answer").value= c;
+}
+if(d==4){
+var a,b,c;
+a=Number(document.getElementById("first").value);
+b=Number(document.getElementById("second").value);
+c= a / b;
+document.getElementById("answer").value= c;
+}}
+</script>
+</head>
+<body>
+<div id="main">
+
+<h1 style="text-decoration: underline; margin-left: 100px;">Simple Calculator</h1>
+<label Style="font-weight:bold; margin-left:134px; font-size:22px;color:White;">
+Enter First Number </label>
+<input type="text" id="first" placeholder="Enter FIRST Number"><br>
+<label Style="font-weight:bold; margin-left:135px; font-size:22px;color:White;">Enter Second Number </label>
+<input type="text" id="second" placeholder="Enter Second Number"><br>
+<input type="submit" name="Add" value="Addition(+)"onclick="cal(1)"></button><br>
+<input type="submit" name="Sub " value="Subtraction(-)"onclick="cal(2)"></button>
+<input type="submit" name="Mul" value="Multiplication(*)"onclick="cal(3)"></button>
+<input type="submit" name="Div"value="Division(/)" onclick="cal(4)"></button><br>
+<h2 > Answer Is</h2>
+<input type="text" id="answer">
+</div>
+</body>
+</html>
